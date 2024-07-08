@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dear zazaba</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            color: #f77f00;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-style: italic; /* 斜体 */
+            color: #f77f00; /* 深灰色 */
+            line-height: 1.6; /* 行高 */
+        }
+        .message span {
+            font-size: 32px; /* 加大重点文本的字体大小 */
+            color: #f77f00; /* 橙色 */
+        }
+        .media {
+            margin-bottom: 30px;
+            overflow: hidden; /* 防止图片溢出容器 */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .media img {
+            width: 100%; /* 确保图片完全填充容器 */
+            height: auto;
+            display: block; /* 修复图片间隙问题 */
+            border-radius: 10px;
+        }
+        .link {
+            margin-top: 30px;
+        }
+
+
+        .link {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-style: italic; /* 斜体 */
+            color: #f77f00; /* 深灰色 */
+            line-height: 1.6; /* 行高 */
+        }
+        .link span {
+            font-size: 32px; /* 加大重点文本的字体大小 */
+            color: #f77f00; /* 橙色 */
+        }
+
+
+
+
+
+        .link a {
+            text-decoration: none;
+            color: #fff;
+            background: #f77f00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: inline-block; /* 避免链接换行 */
+        }
+        .link a:hover {
+            background: #d65a00;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            .message {
+                font-size: 20px;
+            }
+            .link a {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dear...</h1>
+        <div class="message">
+            <p>I want to tell you...</p>
+        </div>
+        
+        <!-- Image Example -->
+        <div class="media">
+            <img src="002.jpg" alt="Your Image">
+        </div>
+        
+        <!-- Music -->
+        <button onclick="play">播放音乐</button>
+        <audio autoplay loop id="myaud">
+            <source src="myjinji.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Webpage Link Example -->
+        <div class="link">
+            <p>Want to know more?</p>
+            <a href="3.html">Click here</a>
+        </div>
+    </div>
+
+    <script>
+        function play(){
+            var audio = document.getElementById("myaud");
+        audio.play();
+        }
+    </script>
+
+</body>
+</html>

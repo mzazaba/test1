@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            color: #f77f00;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-style: italic; /* 斜体 */
+            color: #f77f00; /* 深灰色 */
+            line-height: 1.6; /* 行高 */
+        }
+        .message span {
+            font-size: 32px; /* 加大重点文本的字体大小 */
+            color: #f77f00; /* 橙色 */
+        }
+        .declaration {
+            font-size: 30px;
+            font-weight: bold;
+            color: #e63946;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f77f00;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .media {
+            margin: 30px 0;
+        }
+        .media video {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .countdown {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #f77f00; /* 计时器颜色 */
+        }
+        .back-link {
+            margin-top: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #fff;
+            background: #f77f00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-link a:hover {
+            background: #d65a00;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            .message {
+                font-size: 20px;
+            }
+            .declaration {
+                font-size: 24px;
+                padding: 15px;
+            }
+            .countdown {
+                font-size: 24px;
+            }
+            .back-link a {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dear...</h1>
+        <div class="message">
+            <p>I want to tell you...</p>
+        </div>
+        <!-- Video Example -->
+        <div class="media">
+            <video id="myVideo" autoplay muted loop>
+                <source src="003.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <!-- Countdown -->
+        <div class="countdown" id="countdown"></div>
+
+        <!-- Back Link -->
+        <div class="back-link">
+            <a href="2.html">Back</a>
+        </div>
+    </div>
+
+    <script>
+        // Calculate time difference
+        function calculateTimeDifference() {
+            const now = new Date();
+            const startDate = new Date("2024-01-22");
+            const diff = now - startDate;
+
+            const seconds = Math.floor(diff / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const hours = Math.floor(minutes / 60);
+            const days = Math.floor(hours / 24);
+
+            const remainingHours = hours % 24;
+            const remainingMinutes = minutes % 60;
+            const remainingSeconds = seconds % 60;
+
+            return `${days} days ${remainingHours} hours ${remainingMinutes} minutes ${remainingSeconds} seconds`;
+        }
+
+        // Update countdown
+        function updateCountdown() {
+            document.getElementById("countdown").textContent = `We've been together for \n
+            \n ${calculateTimeDifference()}`;
+
+        }
+
+        // Update countdown initially
+        updateCountdown();
+
+        // Update every second
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

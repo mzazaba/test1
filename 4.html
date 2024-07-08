@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            color: #f77f00;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-style: italic; /* 斜体 */
+            color: #555; /* 深灰色 */
+            line-height: 1.6; /* 行高 */
+        }
+        .message::before {
+            content: open-quote; /* 引号开始 */
+            font-size: 28px;
+        }
+        .message::after {
+            content: close-quote; /* 引号结束 */
+            font-size: 28px;
+        }
+        .message span {
+            font-size: 32px; /* 加大重点文本的字体大小 */
+            color: #f77f00; /* 橙色 */
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            .message {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dear...</h1>
+        <div class="message">
+            <p><span>I want to tell you...</span></p>
+        </div>
+        
+        <!-- Image Example -->
+        <div class="media">
+            <img src="4003.jpg" alt="Your Image">
+        </div>
+        
+        <!-- Music -->
+        <audio autoplay loop>
+            <source src="myjinji.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Webpage Link Example -->
+        <div class="link">
+            <p>Want to know more?</p>
+            <a href="3.html">Click here</a>
+        </div>
+    </div>
+</body>
+</html>
